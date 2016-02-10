@@ -1,29 +1,43 @@
 
 $(document).ready(function() {
 
-var number = prompt("please input a number");
+
+var number = prompt("please input a maximum number");
 var num1= parseInt(number);
+
+
+// function evenNumber() {
+	var evenNumber = prompt("please input an even number");
+	num2 = parseInt(evenNumber);
+	// return num2;	
+	// };	
+
+// function oddNumber() {
+	var oddNumber = prompt("please input an odd number");
+	num3 = parseInt(oddNumber);
+	// return num3;	
+	// };	
 
 
 var fizzbuzzArray = [];
 
-function fizzBuzz(x, y){
+function fizzBuzz(num, evenNum, oddNum){
  
-    for (var i = 1; i <= 100; i++) {
+    for (var i = 1; i <= num; i++) {
 		var val= i;
   	
-		if (val % y === 0 && val % 5 !== 0) {
+		if (val % evenNum == 0 && val % oddNum == 0) {
 			// fizzbuzzArray.push("fizz");
-			$(".fizzbuzzoutput").append('<li>fizz</li>');
+			$(".fizzbuzzoutput").append('<li>fizzbuzz</li>');
        	}
 		
-		else if (val % 5 === 0 && val % y !== 0) {
-		 $(".fizzbuzzoutput").append('<li>buzz</li>');
+		else if (val % oddNum == 0 ) {
+		 $(".fizzbuzzoutput").append('<li>fizz</li>');
 		  // fizzbuzzArray.push("buzz");
 		}
   
- 		else if (val % y === 0 && val % 5 === 0){
- 		$(".fizzbuzzoutput").append('<li>fizzbuzz</li>');		
+ 		else if (val % evenNum == 0){
+ 		$(".fizzbuzzoutput").append('<li>buzz</li>');		
 		  // fizzbuzzArray.push("fizzbuzz");
 		}
 
@@ -35,6 +49,8 @@ function fizzBuzz(x, y){
 }
   
 }
-fizzBuzz(number, num1);
+// evenNumber();
+// oddNumber();
+fizzBuzz(num1, num2, num3);
 
 });
