@@ -5,19 +5,28 @@ $(document).ready(function() {
 var number = prompt("please input a maximum number");
 var num1= parseInt(number);
 
+var num2;
 
-// function evenNumber() {
+function evenNumberCalc() {
 	var evenNumber = prompt("please input an even number");
 	num2 = parseInt(evenNumber);
-	// return num2;	
-	// };	
+	while(num2 % 2 !=　0) {
+	evenNumber = prompt("please input an even number");
+	return num2 = parseInt(evenNumber);
+	}
+}
 
-// function oddNumber() {
+var num3;
+
+function oddNumberCalc() {
 	var oddNumber = prompt("please input an odd number");
 	num3 = parseInt(oddNumber);
-	// return num3;	
-	// };	
-
+	while(num3 % 2 == 0){
+		oddNumber = prompt("please input an odd number");
+		return num3 = parseInt(oddNumber);
+	}
+}
+	
 
 var fizzbuzzArray = [];
 
@@ -49,8 +58,8 @@ function fizzBuzz(num, evenNum, oddNum){
 }
   
 }
-// evenNumber();
-// oddNumber();
+evenNumberCalc();
+oddNumberCalc();
 fizzBuzz(num1, num2, num3);
 
 });
